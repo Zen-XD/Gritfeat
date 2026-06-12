@@ -1,0 +1,304 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial;
+
+    overflow-x: auto;
+}
+
+.pages {
+    width: 100%;
+}
+
+/* Page 1 */
+#pg1 {
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#menu_btn {
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+    color: white;
+    font-size: 1.2rem;
+}
+
+#menu_btn:hover {
+    color: black;
+}
+
+#mainpg1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    letter-spacing: 0.2rem;
+}
+
+#logo {
+    font-size: 1.2rem;
+}
+
+#abv_hielo {
+    width: 40%;
+}
+
+#m_hielo {
+    font-size: 6rem;
+}
+
+#dots_label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.dots {
+    display: none;
+}
+
+#pg1:has(#s1:checked) {
+    background-image: url("https://images.pexels.com/photos/16959094/pexels-photo-16959094.jpeg");
+}
+
+#pg1:has(#s2:checked) {
+    background-image: url("https://images.pexels.com/photos/4913789/pexels-photo-4913789.jpeg");
+}
+
+#pg1:has(#s3:checked) {
+    background-image: url("https://images.pexels.com/photos/5097932/pexels-photo-5097932.jpeg");
+}
+
+/* Page 2 */
+#pg2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: rgb(213, 213, 213);
+}
+
+#pg2_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+
+    height: 90%;
+    width: 80%;
+
+    background-color: rgb(213, 213, 213);
+
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #pg2 {
+        min-height: 200vh;
+
+        padding: 20px 0;
+    }
+
+    #pg2_grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content;
+        height: fit-content;
+        width: 90%;
+
+        text-align: center;
+    }
+}
+
+.pg2_cards {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding-bottom: 5%;
+}
+
+.pg2_img {
+    max-height: 45%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.pg2_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 80%;
+}
+
+.pg2_text1 {
+    letter-spacing: 0.2rem;
+    color: rgb(171, 171, 171);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.pg2_hr {
+    width: 60%;
+    color: rgb(171, 171, 171);
+}
+
+.pg2_text2 {
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.pg2_text3 {
+    color: rgb(171, 171, 171);
+}
+
+.pg2_btn {
+    padding: 10px 20px;
+    background-color: white;
+    border-color: rgb(171, 171, 171);
+}
+
+/* Page 3 */
+
+#pg3 {
+    background-color: rgb(81, 81, 81);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    height: 30vh;
+}
+
+#pg3_text1 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+#pg3_hr {
+    width: 35%;
+}
+
+#pg3_text2 {
+    font-size: 1.5rem;
+}
+
+/* Page 4 */
+
+#pg4 {
+    background-color: rgb(213, 213, 213);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 100vh;
+    height: auto;
+
+    padding: 30px;
+}
+
+#pg4_text1 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+#pg4_hr {
+    width: 35%;
+}
+
+#pg4_text2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#pg4_imgs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 40px;
+
+    height: 70%;
+    width: 80%;
+}
+
+.pg4_img_container {
+    background-color: white;
+    padding: 10px;
+}
+
+.pg4_img {
+    height: 250px;
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+/* Footer */
+#footer {
+    background-color: black;
+    color: white;
+
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    gap: 40%;
+
+    padding: 30px;
+}
+
+#foot_icons {
+    font-size: 1.5rem;
+}
