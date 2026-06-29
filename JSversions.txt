@@ -1,0 +1,159 @@
+# JavaScript Versions
+
+JavaScript follows the ECMAScript (ES) standard. Each new version introduces features that make the language more readable, efficient, secure, and easier to maintain.
+
+1. ES5 (ECMAScript 5) - 2009
+ES5 introduced several improvements that made JavaScript more reliable and easier to work with.
+
+New features
+> Strict Mode
+> Native JSON support
+> Array methods (forEach(), map(), filter(), reduce(), every(), some(), etc)
+> Object property descriptors
+> Getter and Setter methods
+
+Benifits
+> Strict Mode catches common programming errors.
+> Built-in array methods reduce code length.
+> JSON parsing and stringifying became native.
+> Code became safer and easier to maintain.
+
+
+
+2. ES6 (ECMAScript 6) - 2015
+ES6 is considered the biggest update in JavaScript history.
+
+New features
+> ES6 introduced two new ways of declaring variables
+    `let`
+    `const`
+
+    var vs let and const
+    > Function scoped vs block scoped 
+    > var can be redeclared accidentally.
+    > var hoisting often causes unexpected behavior.
+
+
+> ES6 introduced a shorter syntax for writing functions (arrow functions).
+
+> Strings can now be written using backticks ("`").
+
+> Variables can be extracted directly from arrays and objects (destructuring).
+    const {name, age} = student;
+
+> Introduced the spread operator for expanding arrays and objects ("...").
+
+> Functions can collect unlimited arguments into one array.
+
+> ES6 introduced class syntax.
+
+> JavaScript files can now be imported and exported.
+
+> Promises were introduced to handle asynchronous operations.
+
+
+
+3. ES2016
+
+New Features
+> Added exponent operator (`**`)
+> Array.includes() provides a simple way to check whether an array contains a specific value.
+
+
+
+4. ES2017
+
+New feature:
+> Async/Await for asynchronous operations.
+
+
+
+5. ES2018
+
+New features:
+> Object Rest/Spread commonly used to copy objects, merge multiple objects, or update specific properties without modifying the original object.
+> Promise.finally() provides a way to execute a piece of code after a Promise is settled, regardless of whether it was fulfilled (resolved) or rejected.
+
+
+
+6. ES2019
+
+New features:
+> Array.flat() creates a new array by flattening (combining) nested arrays into a single array.
+> Array.flatMap() combines the functionality of map() and flat() into a single method. It first applies a mapping function to each element of an array and then flattens the result by one level.
+> Object.fromEntries() converts an iterable of key-value pairs (such as a Map or an array of arrays) into a JavaScript object.
+
+
+
+7. ES2020
+
+New Features:
+> Optional Chaining ("?") provides a safe way to access deeply nested object properties or call methods that may not exist, without causing a runtime error.
+> Nullish Coalescing ("??") provides a way to assign a default value only when a variable is null or undefined.
+> BigInt
+
+
+
+8. ES2021
+
+New features:
+> Logical Assignment Operators
+> replaceAll() replaces all occurrences of a specified substring or pattern in a string and returns a new string.
+
+
+
+9. ES2022
+
+New features:
+> Private class fields ("#") allows developers to define private properties and methods inside a class that cannot be accessed or modified directly from outside the class.
+> Top-level await allows developers to use the await keyword directly at the top level of an ES module, without wrapping it inside an async function.
+
+
+
+10. ES2023
+
+New features:
+> New array methods
+    * findLast() 
+    * toSorted()
+    * toReversed()
+    * toSpliced()
+
+> Modern Data Structures
+    a. Map
+    > A collection of key-value pairs where keys can be any data type.
+    For eg:
+        __CODE__
+        const students = new Map();
+        students.set(1,"abc");
+        students.set(2,"def");
+        console.log(students.get(2));
+
+        __OUTPUT__
+        def
+
+    b. Set
+    > A collection that stores only unique values.
+    For eg:
+        __CODE__
+        const unique = new Set([1,2,2,3,4]);
+        console.log(unique);
+
+        __OUTPUT__
+        Set(4) { 1, 2, 3, 4 }
+
+    c. WeakMap
+    > A Map where keys must be objects and are automatically garbage collected when no longer used.
+    For eg:
+        __CODE__
+        const wm = new WeakMap();
+        let obj = {};
+        wm.set(obj,"Admin");
+
+    d. WeakSet
+    > A Set that stores only objects using weak references.
+    For eg:
+        __CODE__
+        const ws = new WeakSet();
+        let obj = {};
+        ws.add(obj);
