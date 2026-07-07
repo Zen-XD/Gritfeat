@@ -97,9 +97,26 @@ Q1 = () => {
 
 // Get an array of all employee names.
 Q2 = () => {
-    const employeeNames = data.flatMap((dept) =>
-        dept.employees.map((emp) => emp.name),
-    );
+    // const employeeNames = data.reduce((data, names) => {
+    //     const empNames = data.employees.reduce((n1, n2) => {
+    //         n1.push(n2.name);
+    //         return n1;
+    //     }, []);
+
+    //     const empNames2 = names.employees.reduce((n1, n2) => {
+    //         n1.push(n2.name);
+    //         return n1;
+    //     }, []);
+
+    //     const allEmployees = [...empNames, ...empNames2];
+
+    //     return allEmployees;
+    // });
+
+    const employeeNames = data.flatMap((dept) => {
+        return dept.employees.map((emp) => emp.name);
+    });
+
     console.log(employeeNames);
 };
 // Q2();
@@ -126,11 +143,11 @@ Q4 = () => {
     const hardestWorker = employees.reduce((maxEmployee, employee) => {
         const maxHours = maxEmployee.projects.reduce((sum, project) => {
             return sum + project.hours;
-        }, 0); //returns 200 because first entry from reduce
+        }, 0);
 
         const totalHours = employee.projects.reduce((sum, project) => {
             return sum + project.hours;
-        }, 0); // rest of the entries from reduce
+        }, 0);
 
         // console.log(totalHours);
         // console.log(maxHours);
@@ -200,12 +217,17 @@ Q6 = () => {
 
 // Find the department with the highest total salary expense.
 Q7 = () => {
-    const departmentSalary = data.reduce(
+    const salary = data.reduce(
         (max, dept) => {
             const totalSalary = dept.employees.reduce(
                 (sum, sal) => sum + sal.salary,
                 0,
             );
+
+            // const maxSalary = max.employees.reduce(
+            //     (sum, sal) => sum + sal.salary,
+            //     0,
+            // );
 
             return totalSalary > max.totalSalary
                 ? {
@@ -217,7 +239,7 @@ Q7 = () => {
         { departmentName: "", totalSalary: 0 },
     );
 
-    console.log(departmentSalary);
+    console.log(salary);
 };
 // Q7();
 
@@ -303,7 +325,7 @@ Q8 = () => {
 // }
 Q9 = () => {
     const groupByStatus = data
-        .flatMap((department) => department.employees)
+        .flatMap((dept) => dept.employees)
         .flatMap((employee) => employee.projects)
         .reduce((groups, project) => {
             if (!groups[project.status]) {
@@ -317,19 +339,19 @@ Q9 = () => {
 
     console.log(groupByStatus);
 };
-Q9();
+// Q9();
 
 // Find the average salary of employees who have at least one completed project.
 Q10 = () => {
-    const completedEmployees = data
-        .flatMap((department) => department.employees)
+    const completedEmp = data
+        .flatMap((dept) => dept.employees)
         .filter((employee) =>
             employee.projects.some((project) => project.status === "completed"),
         );
 
     const averageSalary =
-        completedEmployees.reduce((sum, employee) => sum + employee.salary, 0) /
-        completedEmployees.length;
+        completedEmp.reduce((sum, employee) => sum + employee.salary, 0) /
+        completedEmp.length;
 
     console.log(averageSalary);
 };
@@ -338,9 +360,9 @@ Q10 = () => {
 // Find the employee who has the highest average project hours.
 Q11 = () => {
     const highestAverage = data
-        .flatMap((department) => department.employees)
+        .flatMap((dept) => dept.employees)
         .reduce(
-            (best, employee) => {
+            (highest, employee) => {
                 const total = employee.projects.reduce(
                     (sum, project) => sum + project.hours,
                     0,
@@ -348,7 +370,9 @@ Q11 = () => {
 
                 const average = total / employee.projects.length;
 
-                return average > best.average ? { employee, average } : best;
+                return average > highest.average
+                    ? { employee, average }
+                    : highest;
             },
             { employee: null, average: 0 },
         );
@@ -370,15 +394,17 @@ Q12 = () => {
                 return (
                     sum +
                     employee.projects.reduce(
-                        (pSum, project) => pSum + project.hours,
+                        (whrSum, project) => whrSum + project.hours,
                         0,
                     )
                 );
             }, 0);
 
+            const phrRatio = salary / hours;
+
             return {
                 department: department.departmentName,
-                ratio: salary / hours,
+                ratio: phrRatio,
             };
         })
         .reduce((highest, current) =>
@@ -395,6 +421,30 @@ Q12 = () => {
 //   low: [employeeData]
 // }
 Q13 = () => {
+    // const groupedEmployees = data.flatMap((department) => {
+    //     const gr = department.employees.reduce(
+    //         (groups, employee) => {
+    //             const totalHours = employee.projects.reduce(
+    //                 (sum, project) => sum + project.hours,
+    //                 0,
+    //             );
+
+    //             if (totalHours > 150) {
+    //                 groups.high.push(employee.name);
+    //             } else {
+    //                 groups.low.push(employee.name);
+    //             }
+
+    //             return groups;
+    //         },
+    //         {
+    //             high: [],
+    //             low: [],
+    //         },
+    //     );
+    //     return gr;
+    // });
+
     const groupedEmployees = data
         .flatMap((department) => department.employees)
         .reduce(
@@ -405,9 +455,9 @@ Q13 = () => {
                 );
 
                 if (totalHours > 150) {
-                    groups.high.push(employee);
+                    groups.high.push(employee.name);
                 } else {
-                    groups.low.push(employee);
+                    groups.low.push(employee.name);
                 }
 
                 return groups;
