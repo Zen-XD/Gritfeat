@@ -6,7 +6,6 @@ import { FiPlus } from "react-icons/fi";
 const App = () => {
     return (
         <div className="w-full h-full flex flex-col">
-            {/* Navbar: Adjusted padding and allowed links to wrap/scale on mobile */}
             <nav className="w-full h-20 px-6 lg:px-20 bg-cyan-500 flex justify-between items-center fixed z-50 text-white shadow-xl/20">
                 <p className="font-extrabold font-sans text-2xl lg:text-[30px]">
                     Lorem
@@ -27,7 +26,6 @@ const App = () => {
                 </div>
             </nav>
 
-            {/* Main Hero: Changed to flex-col on mobile, flex-row on large screens. Fixed arbitrary widths. */}
             <main className="w-full min-h-screen pt-28 pb-12 px-6 lg:px-40 bg-cyan-500 text-white flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-12 lg:gap-0">
                 <section className="w-full lg:max-w-150 flex flex-col justify-center items-start gap-4">
                     <p className="text-4xl lg:text-5xl font-extrabold leading-tight lg:leading-16">
@@ -111,7 +109,6 @@ const App = () => {
                 </section>
             </main>
 
-            {/* Features Section: Switched to CSS grid/flex-col for mobile layout */}
             <section className="w-full h-auto bg-cyan-500 text-white px-6 lg:px-40 py-12 lg:py-20 flex flex-col justify-center items-start gap-4">
                 <p className="font-bold text-2xl lg:text-[28px]">Why Lorem?</p>
                 <div className="w-full flex flex-col md:flex-row gap-4 mb-8">
@@ -160,7 +157,6 @@ const App = () => {
                     Frequently Asked Questions
                 </p>
 
-                {/* FAQ: Changed h-10 to min-h-[3rem] h-auto to prevent text overflow on mobile */}
                 <div className="w-full flex flex-col gap-4 justify-center items-center font-semibold text-sm lg:text-base">
                     <button className="group w-full min-h-16 h-auto p-4 lg:p-6 bg-white text-cyan-500 rounded-2xl lg:rounded-full flex justify-between items-center text-left">
                         <p className="group-hover:hidden w-[90%]">
@@ -217,7 +213,6 @@ const App = () => {
                 </div>
             </section>
 
-            {/* Footer: Changed grid columns to 2 on small screens, 4 on medium+ */}
             <footer className="w-full h-auto bg-cyan-500 text-white px-6 lg:px-40 py-12 lg:py-20 flex flex-col gap-8 shadow-[0_-5px_15px_rgba(0,0,0,0.2)]">
                 <a href="" className="underline hover:text-gray-200 w-fit">
                     Questions? Contact Us
