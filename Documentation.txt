@@ -1,0 +1,37 @@
+Week 3&4 Task 1 : JS Objects and Arrays
+
+# Problem statement
+
+Use the given data to complete the given tasks using reduce method
+
+# Approach
+
+Mostly use trial and error method while constantly printing the output to console to figure out what the result is. Some I had to look up the solutions to but were mostly helpful to understand new and key concepts which were used in the following tasks.
+
+# Solution
+
+1. Basic use of .reduce but very important for future use could also just use flatmap with a count. used the length of employee (2+2) to get the final length
+
+2. could be done completely with reduce and have provided the solution as well but flatmap and map make it so much simpler.
+
+3. first used map to run both employees array then used reduce to calculate the emp salary
+
+4. ran reduce twice inside reduce to calcualte the time of all entries (could be done much simply with flatmap as well)
+
+5. reduce concept similar to Q4 just add two each from map
+
+6. fisrt question where I found no use of reduce, using map is necessary to get the data in provided format
+
+7. similar concept to Q4 decided to use "?" instaed of "if" and learnt that you do not have to do the same thing twice inctead using "arg1.variable_name" works
+
+8. had to look up the solution as I could not arrange the data in given format
+
+9. had to look up the "if" logic
+
+10. used .fliter in combination with .some to return entries where status = "completed"
+
+11. basically the same as Q7 but used flatmap
+
+12. much simple than it looks, just had to calculate salary(done previously) and hours(also done previously) and calulate a new value using the two
+
+13. had to look up the solution as I could not arrange the data in given format
