@@ -1,5 +1,5 @@
 {
-    "name": "timecomplexity",
+    "name": "banksystem",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -16,5 +16,8 @@
         "@types/node": "^26.1.2",
         "ts-node": "^10.9.2",
         "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "nodemon": "^3.1.14"
     }
 }
