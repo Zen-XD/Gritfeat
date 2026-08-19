@@ -1,16 +1,16 @@
-# Task 2 Documentation & todo-api
+# Task 3 MovieTV Web App
 
 #### Problem statement
 
-Build a Todo API using Express.js
+Build a Movie & TV show search website
 
 #### Approach
 
-Implemented a API with Express.js, used Zod for request validation, created a custom middleware for logging, and managed file-based CRUD operations asynchronously
+Implemented react-router-dom for handling multi-view navigation, @tanstack/react-query to effectively manage data fetching, caching, and loading/error states and Tailwind CSS to build a clean, minimal design
 
 #### Solution
 
-Built a Todo API that supports query parameters for filtering, sorting, and pagination alongside standard CRUD operations
+Built a carusel style viewer to display movies and implemeted a search function
 
 #### Assumptions
 
