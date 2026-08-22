@@ -1,16 +1,16 @@
-# Task 3 MovieTV Web App
+# Task 1 DataBase Queries
 
 #### Problem statement
 
-Build a Movie & TV show search website
+Write queries for the given questions
 
 #### Approach
 
-Implemented react-router-dom for handling multi-view navigation, @tanstack/react-query to effectively manage data fetching, caching, and loading/error states and Tailwind CSS to build a clean, minimal design
+Created a mongoose db with the given data and tried out the different queries using mongoose
 
 #### Solution
 
-Built a carusel style viewer to display movies and implemeted a search function
+Wrote different queries to manipulate and retrive data from the database
 
 #### Assumptions
 
