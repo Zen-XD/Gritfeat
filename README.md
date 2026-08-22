@@ -1,4 +1,4 @@
-# Task 1 DataBase Queries
+# Task 2 DataBase Queries
 
 #### Problem statement
 
@@ -6,7 +6,7 @@ Write queries for the given questions
 
 #### Approach
 
-Created a mongoose db with the given data and tried out the different queries using mongoose
+Created a mongoose db with the given data and tried out the different queries using mongoose with extrnal help
 
 #### Solution
 
